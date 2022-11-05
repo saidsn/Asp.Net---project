@@ -16,5 +16,13 @@ namespace Asp.Net_end_project.Data
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Currency> Currencies { get; set; }
         public DbSet<Language> Languages { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<OurProduct> OurProducts { get; set; }
+        public DbSet<Product> Products { get; set; }
+
+
+
     }
 }

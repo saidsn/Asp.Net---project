@@ -25,14 +25,20 @@ namespace Asp.Net_end_project.Controllers
         public async Task<IActionResult> Index()
         {
             IEnumerable<Slider> sliders = await _context.Sliders.Where(m => !m.IsDeleted).ToListAsync();
-            IEnumerable<Currency> currencies = await _context.Currencies.Where(m => !m.IsDeleted).ToListAsync();
-            IEnumerable<Language> languages = await _context.Languages.Where(m => !m.IsDeleted).ToListAsync();
+            IEnumerable<Service> services = await _context.Services.Where(m => !m.IsDeleted).ToListAsync();
+            OurProduct ourProduct = await _context.OurProducts.Where(m => !m.IsDeleted).FirstOrDefaultAsync();
+            IEnumerable<Product> products = await _context.Products.Where(m => !m.IsDeleted).ToListAsync();
+
+
+
 
             HomeVM model = new HomeVM
             {
                 Sliders = sliders,
-                Currencies = currencies,
-                Languages = languages
+                Services = services,
+                OurProduct = ourProduct,
+                Products = products,
+                
             };
 
             return View(model);
