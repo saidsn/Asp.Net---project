@@ -1,4 +1,4 @@
-﻿
+﻿@model BlogVM
 @{
     ViewData["Title"] = "Blog Page";
 }
@@ -31,21 +31,26 @@
                 <div class="col-lg-3 order-2 order-lg-1">
                     <div class="blog-widget-wrapper">
                         <!-- widget item start -->
-                        <div class="blog-widget">
-                            <div class="blog-widget-img">
-                                <img src="~/assets/img/blog/11.jpg" alt="author thumb" />
-                            </div>
-                            <div class="blog-author-title text-center">
-                                <h5>Erik Jhonson</h5>
-                                <span>UI UX Designer</span>
-                                <div class="blog-widget-icon">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-vimeo"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        @foreach (var item in Model.Customers)
+                        {
+                            <div class="blog-widget">
+                                <div class="blog-widget-img">
+                                    <img src="~/assets/img/blog/@item.Image" alt="author thumb" />
+                                </div>
+                                <div class="blog-author-title text-center">
+                                    <h5>@item.BlogAuthor</h5>
+                                    <span>@item.Position</span>
+                                    <div class="blog-widget-icon">
+                                        @foreach (var icon in item.Socials)
+                                        {
+                                            
+                                            <a href="#"><i class="fa fa-@icon.Image"></i></a>
+                                        }
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
+
                         <!-- widget item end -->
                         <!-- widget item start -->
                         <div class="blog-widget">
@@ -128,140 +133,79 @@
                 </div>
                 <div class="col-lg-9 order-1 order-lg-2">
                     <div class="row">
-                        <div class="col-md-6">
-                            <!-- blog single item start -->
-                            <div class="blog-post-item mb-30">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="~/assets/img/blog/blog-1.jpg" alt="blog thumb">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">
-                                            Celebrity Daughter Opens About Upto Having Her Eye
+                   
+
+
+
+                        @foreach (var item in Model.Blogs)
+                        {
+                            <div class="col-md-6">
+                                <!-- blog single item start -->
+                                <div class="blog-post-item mb-30">
+                                    <div class="blog-thumb">
+                                        <a asp-controller="BlogDetail" asp-action="Index">
+                                            <img src="~/assets/img/blog/@item.Image" alt="blog thumb">
                                         </a>
-                                    </h5>
-                                    <ul class="blog-meta">
-                                        <li><span>By: </span>Admin,</li>
-                                        <li><span>On: </span>14.07.2029</li>
-                                    </ul>
-                                    <a href="blog-details.html" class="read-more">Read More...</a>
+                                    </div>
+                                    <div class="blog-content">
+                                        <h5 class="blog-title">
+                                            <a href="blog-details.html">
+                                                @item.Title
+                                            </a>
+                                        </h5>
+                                        <ul class="blog-meta">
+                                            <li><span>By: </span>@item.Admin</li>
+                                            <li><span>On: </span>@item.CreateDate</li>
+                                        </ul>
+                                        <a href="blog-details.html" class="read-more">Read More...</a>
+                                    </div>
                                 </div>
+                                <!-- blog single item start -->
                             </div>
-                            <!-- blog single item start -->
-                        </div>
-                        <div class="col-md-6">
-                            <!-- blog single item start -->
-                            <div class="blog-post-item mb-30">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="~/assets/img/blog/blog-2.jpg" alt="blog thumb">
-                                    </a>
+                        }
+                           <div class="col-md-6">
+                                <!-- blog single item start -->
+                                <div class="blog-post-item mb-30">
+                                    <div class="blog-thumb embed-responsive embed-responsive-16by9">
+                                        <iframe src="https://www.youtube.com/embed/4qNHr0W6F0o" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="blog-content">
+                                        <h5 class="blog-title">
+                                            <a href="blog-details.html">
+                                                Children Left Home Alone For 4 Days In TV Series Experiment
+                                            </a>
+                                        </h5>
+                                        <ul class="blog-meta">
+                                            <li><span>By: </span>Admin,</li>
+                                            <li><span>On: </span>14.07.2029</li>
+                                        </ul>
+                                        <a href="blog-details.html" class="read-more">Read More...</a>
+                                    </div>
                                 </div>
-                                <div class="blog-content">
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">
-                                            Sotto Winner Offering Up Money To Any Man That Will Date Her
-                                        </a>
-                                    </h5>
-                                    <ul class="blog-meta">
-                                        <li><span>By: </span>Admin,</li>
-                                        <li><span>On: </span>14.07.2029</li>
-                                    </ul>
-                                    <a href="blog-details.html" class="read-more">Read More...</a>
-                                </div>
+                                <!-- blog single item start -->
                             </div>
-                            <!-- blog single item start -->
-                        </div>
-                        <div class="col-md-6">
-                            <!-- blog single item start -->
-                            <div class="blog-post-item mb-30">
-                                <div class="blog-thumb embed-responsive embed-responsive-16by9">
-                                    <iframe src="https://www.youtube.com/embed/4qNHr0W6F0o" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <div class="col-md-6">
+                                <!-- blog single item start -->
+                                <div class="blog-post-item mb-30">
+                                    <div class="blog-thumb embed-responsive embed-responsive-16by9">
+                                        <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/501298839&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                                    </div>
+                                    <div class="blog-content">
+                                        <h5 class="blog-title">
+                                            <a href="blog-details.html">
+                                                People Are Willing Lie When To Comes Money Research from
+                                            </a>
+                                        </h5>
+                                        <ul class="blog-meta">
+                                            <li><span>By: </span>Admin,</li>
+                                            <li><span>On: </span>14.07.2029</li>
+                                        </ul>
+                                        <a href="blog-details.html" class="read-more">Read More...</a>
+                                    </div>
                                 </div>
-                                <div class="blog-content">
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">
-                                            Children Left Home Alone For 4 Days In TV Series Experiment
-                                        </a>
-                                    </h5>
-                                    <ul class="blog-meta">
-                                        <li><span>By: </span>Admin,</li>
-                                        <li><span>On: </span>14.07.2029</li>
-                                    </ul>
-                                    <a href="blog-details.html" class="read-more">Read More...</a>
-                                </div>
+                                <!-- blog single item start -->
                             </div>
-                            <!-- blog single item start -->
-                        </div>
-                        <div class="col-md-6">
-                            <!-- blog single item start -->
-                            <div class="blog-post-item mb-30">
-                                <div class="blog-thumb embed-responsive embed-responsive-16by9">
-                                    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/501298839&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-                                </div>
-                                <div class="blog-content">
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">
-                                            People Are Willing Lie When To Comes Money Research from
-                                        </a>
-                                    </h5>
-                                    <ul class="blog-meta">
-                                        <li><span>By: </span>Admin,</li>
-                                        <li><span>On: </span>14.07.2029</li>
-                                    </ul>
-                                    <a href="blog-details.html" class="read-more">Read More...</a>
-                                </div>
-                            </div>
-                            <!-- blog single item start -->
-                        </div>
-                        <div class="col-md-6">
-                            <!-- blog single item start -->
-                            <div class="blog-post-item mb-30">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="~/assets/img/blog/blog-3.jpg" alt="blog thumb">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">
-                                            Romantic Love Stories Of Hollywood Popular Celebrities
-                                        </a>
-                                    </h5>
-                                    <ul class="blog-meta">
-                                        <li><span>By: </span>Admin,</li>
-                                        <li><span>On: </span>14.07.2029</li>
-                                    </ul>
-                                    <a href="blog-details.html" class="read-more">Read More...</a>
-                                </div>
-                            </div>
-                            <!-- blog single item start -->
-                        </div>
-                        <div class="col-md-6">
-                            <!-- blog single item start -->
-                            <div class="blog-post-item mb-30">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html">
-                                        <img src="~/assets/img/blog/blog-4.jpg" alt="blog thumb">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <h5 class="blog-title">
-                                        <a href="blog-details.html">
-                                            Celebrity Daughter Opens About Upto Having Her Eye
-                                        </a>
-                                    </h5>
-                                    <ul class="blog-meta">
-                                        <li><span>By: </span>Admin,</li>
-                                        <li><span>On: </span>14.07.2029</li>
-                                    </ul>
-                                    <a href="blog-details.html" class="read-more">Read More...</a>
-                                </div>
-                            </div>
-                            <!-- blog single item start -->
-                        </div>
+
                     </div>
                     <!-- start pagination area -->
                     <div class="paginatoin-area text-center">

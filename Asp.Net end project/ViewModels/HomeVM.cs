@@ -12,7 +12,12 @@ namespace Asp.Net_end_project.ViewModels
         public IEnumerable<Service> Services { get; set; }
         public OurProduct OurProduct { get; set; }
         public IEnumerable<Product> Products { get; set; }
-
+        public IEnumerable<Banner> Banners { get; set; }
+        public TopSeller TopSeller { get; set; }
+        public SingleBanner SingleBanner { get; set; }
+        public OurBlog OurBlog { get; set; }
+        public IEnumerable<Blog> Blogs { get; set; }
+        public IEnumerable<Brand> Brands { get; set; }
 
     }
 }

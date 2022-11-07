@@ -78,8 +78,11 @@
                         {
                             <div class="product-item mb-50">
                                 <div class="product-thumb">
-                                    <a href="product-details.html">
-                                        <img src="~/assets/img/product/@product.Image" alt="">
+                                    <a asp-controller="ProductDetail" asp-action="Index">
+                                 
+                                            <img src="~/assets/img/product/@product.ProductImages.FirstOrDefault(m=>m.IsMain)?.Image" alt="">
+
+                                        
                                     </a>
                                 </div>
                                 <div class="product-content">
@@ -87,8 +90,8 @@
                                         <a href="product-details.html">@product.Title</a>
                                     </h5>
                                     <div class="price-box">
-                                        <span class="price-regular">$@product.Price.ToString("##.00")</span>
-                                        <span class="price-old"><del>$@product.DiscountPrice.ToString("##.00")</del></span>
+                                        <span class="price-regular">$ @((product.Price-((product.Price * product.DiscountPrice)/100)).ToString("##.00"))</span>
+                                        <span class="price-old"><del>$ @product.Price.ToString("##.00")</del></span>
                                     </div>
                                     <div class="product-action-link">
                                         <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
@@ -113,28 +116,22 @@
     <div class="banner-statistics">
         <div class="container">
             <div class="row no-gutters mtn-30">
-                <div class="col-md-6">
-                    <div class="img-container mt-30">
-                        <a href="product-details.html">
-                            <img src="~/assets/img/banner/banner-1.jpg" alt="banner-image">
-                        </a>
-                        <div class="banner-text">
-                            <h5 class="banner-subtitle">sports shoes</h5>
-                            <h3 class="banner-title">20% Off<br>For Sports men</h3>
+                @foreach (var banner in Model.Banners)
+                {
+                    <div class="col-md-6">
+                        <div class="img-container mt-30">
+                            <a href="product-details.html">
+                                <img src="~/assets/img/banner/@banner.Image" alt="banner-image">
+                            </a>
+                            <div class="banner-text">
+                                <h5 class="banner-subtitle">@banner.SubTitle</h5>
+                                <h3 class="banner-title">20% Off<br>@banner.Title</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="img-container mt-30">
-                        <a href="product-details.html">
-                            <img src="~/assets/img/banner/banner-2.jpg" alt="banner-image">
-                        </a>
-                        <div class="banner-text">
-                            <h5 class="banner-subtitle">sports shoes</h5>
-                            <h3 class="banner-title">20% Off<br>For Sports men</h3>
-                        </div>
-                    </div>
-                </div>
+                }
+
+            
             </div>
         </div>
     </div>
@@ -145,8 +142,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h2 class="title">top seller</h2>
-                        <p class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        <h2 class="title">@Model.TopSeller.Title</h2>
+                        <p class="sub-title">@Model.TopSeller.Description</p>
                     </div>
                 </div>
             </div>
@@ -154,222 +151,49 @@
                 <div class="col-xl-4 col-lg-5 col-md-5">
                     <div class="product-banner">
                         <a href="#">
-                            <img src="~/assets/img/banner/banner-3.jpg" alt="product banner">
+                            <img src="~/assets/img/banner/@Model.SingleBanner.Image" alt="product banner">
                         </a>
                     </div>
                 </div>
                 <div class="col-xl-8 col-lg-7 col-md-7">
                     <div class="top-seller-carousel slick-row-15 mtn-30">
-                        <!-- product item start -->
-                        <div class="slide-item">
-                            <div class="pro-item-small mt-30">
-                                <div class="product-thumb">
-                                    <a href="product-details.html">
-                                        <img src="~/assets/img/product/pro-small-1.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="pro-small-content">
-                                    <h6 class="product-name">
-                                        <a href="product-details.html">Simple Fabric Shoe</a>
-                                    </h6>
-                                    <div class="price-box">
-                                        <span class="price-regular">$80.00</span>
-                                        <span class="price-old"><del>$70.00</del></span>
-                                    </div>
-                                    <div class="ratings">
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                    </div>
-                                    <div class="product-link-2">
-                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
-                                        <a href="#" data-toggle="modal" data-target="#quick_view">
-                                            <span data-toggle="tooltip"
-                                                  title="Quick View"><i class="ion-ios-eye-outline"></i></span>
+                        @foreach (var item in Model.Products)
+                        {
+                            <div class="slide-item">
+                                <div class="pro-item-small mt-30">
+                                    <div class="product-thumb">
+                                        <a href="product-details.html">
+                                            <img src="~/assets/img/product/@item.ProductImages.FirstOrDefault(m=>m.IsMain)?.Image" alt="">
                                         </a>
+                                    </div>
+                                    <div class="pro-small-content">
+                                        <h6 class="product-name">
+                                            <a href="product-details.html">@item.Title</a>
+                                        </h6>
+                                        <div class="price-box">
+                                            <span class="price-regular">$@((item.Price-((item.Price * item.DiscountPrice)/100)).ToString("##.00"))</span>
+                                            <span class="price-old"><del>$@item.Price.ToString("##.00")</del></span>
+                                        </div>
+                                        <div class="ratings">
+                                            <span><i class="ion-android-star"></i></span>
+                                            <span><i class="ion-android-star"></i></span>
+                                            <span><i class="ion-android-star"></i></span>
+                                            <span><i class="ion-android-star"></i></span>
+                                            <span><i class="ion-android-star"></i></span>
+                                        </div>
+                                        <div class="product-link-2">
+                                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                            <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
+                                            <a href="#" data-toggle="modal" data-target="#quick_view">
+                                                <span data-toggle="tooltip"
+                                                      title="Quick View"><i class="ion-ios-eye-outline"></i></span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- product item start -->
-                        <!-- product item start -->
-                        <div class="slide-item">
-                            <div class="pro-item-small mt-30">
-                                <div class="product-thumb">
-                                    <a href="product-details.html">
-                                        <img src="~/assets/img/product/pro-small-2.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="pro-small-content">
-                                    <h6 class="product-name">
-                                        <a href="product-details.html">exclusive mens shoe</a>
-                                    </h6>
-                                    <div class="price-box">
-                                        <span class="price-regular">$80.00</span>
-                                        <span class="price-old"><del>$70.00</del></span>
-                                    </div>
-                                    <div class="ratings">
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                    </div>
-                                    <div class="product-link-2">
-                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
-                                        <a href="#" data-toggle="modal" data-target="#quick_view">
-                                            <span data-toggle="tooltip"
-                                                  title="Quick View"><i class="ion-ios-eye-outline"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- product item start -->
-                        <!-- product item start -->
-                        <div class="slide-item">
-                            <div class="pro-item-small mt-30">
-                                <div class="product-thumb">
-                                    <a href="product-details.html">
-                                        <img src="~/assets/img/product/pro-small-3.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="pro-small-content">
-                                    <h6 class="product-name">
-                                        <a href="product-details.html">Quickiin Mens shoes</a>
-                                    </h6>
-                                    <div class="price-box">
-                                        <span class="price-regular">$80.00</span>
-                                        <span class="price-old"><del>$70.00</del></span>
-                                    </div>
-                                    <div class="ratings">
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                    </div>
-                                    <div class="product-link-2">
-                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
-                                        <a href="#" data-toggle="modal" data-target="#quick_view">
-                                            <span data-toggle="tooltip"
-                                                  title="Quick View"><i class="ion-ios-eye-outline"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- product item start -->
-                        <!-- product item start -->
-                        <div class="slide-item">
-                            <div class="pro-item-small mt-30">
-                                <div class="product-thumb">
-                                    <a href="product-details.html">
-                                        <img src="~/assets/img/product/pro-small-4.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="pro-small-content">
-                                    <h6 class="product-name">
-                                        <a href="product-details.html">Primitive Men shoes</a>
-                                    </h6>
-                                    <div class="price-box">
-                                        <span class="price-regular">$80.00</span>
-                                        <span class="price-old"><del>$70.00</del></span>
-                                    </div>
-                                    <div class="ratings">
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                    </div>
-                                    <div class="product-link-2">
-                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
-                                        <a href="#" data-toggle="modal" data-target="#quick_view">
-                                            <span data-toggle="tooltip"
-                                                  title="Quick View"><i class="ion-ios-eye-outline"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- product item start -->
-                        <!-- product item start -->
-                        <div class="slide-item">
-                            <div class="pro-item-small mt-30">
-                                <div class="product-thumb">
-                                    <a href="product-details.html">
-                                        <img src="~/assets/img/product/pro-small-2.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="pro-small-content">
-                                    <h6 class="product-name">
-                                        <a href="product-details.html">Sports Mens shoes</a>
-                                    </h6>
-                                    <div class="price-box">
-                                        <span class="price-regular">$80.00</span>
-                                        <span class="price-old"><del>$70.00</del></span>
-                                    </div>
-                                    <div class="ratings">
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                    </div>
-                                    <div class="product-link-2">
-                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
-                                        <a href="#" data-toggle="modal" data-target="#quick_view">
-                                            <span data-toggle="tooltip"
-                                                  title="Quick View"><i class="ion-ios-eye-outline"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- product item start -->
-                        <!-- product item start -->
-                        <div class="slide-item">
-                            <div class="pro-item-small mt-30">
-                                <div class="product-thumb">
-                                    <a href="product-details.html">
-                                        <img src="~/assets/img/product/pro-small-3.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="pro-small-content">
-                                    <h6 class="product-name">
-                                        <a href="product-details.html">Quickiin Mens shoes</a>
-                                    </h6>
-                                    <div class="price-box">
-                                        <span class="price-regular">$80.00</span>
-                                        <span class="price-old"><del>$70.00</del></span>
-                                    </div>
-                                    <div class="ratings">
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                        <span><i class="ion-android-star"></i></span>
-                                    </div>
-                                    <div class="product-link-2">
-                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                        <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
-                                        <a href="#" data-toggle="modal" data-target="#quick_view">
-                                            <span data-toggle="tooltip"
-                                                  title="Quick View"><i class="ion-ios-eye-outline"></i></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- product item start -->
+                        }
+                    
                     </div>
                 </div>
             </div>
@@ -382,98 +206,38 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h2 class="title">our blog</h2>
-                        <p class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                        <h2 class="title">@Model.OurBlog.Title</h2>
+                        <p class="sub-title">@Model.OurBlog.Description</p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="blog-carousel-active slick-row-15">
-                        <!-- blog single item start -->
-                        <div class="blog-post-item">
-                            <div class="blog-thumb">
-                                <a href="blog-details.html">
-                                    <img src="~/assets/img/blog/blog-1.jpg" alt="blog thumb">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="blog-title">
+                        @foreach (var blog in Model.Blogs)
+                        {
+                            <div class="blog-post-item">
+                                <div class="blog-thumb">
                                     <a href="blog-details.html">
-                                        Celebrity Daughter Opens About to Having Her Eye color
+                                        <img src="~/assets/img/blog/@blog.Image" alt="blog thumb">
                                     </a>
-                                </h5>
-                                <ul class="blog-meta">
-                                    <li><span>By: </span>Admin,</li>
-                                    <li><span>On: </span>14.07.2029</li>
-                                </ul>
-                                <a href="blog-details.html" class="read-more">Read More...</a>
+                                </div>
+                                <div class="blog-content">
+                                    <h5 class="blog-title">
+                                        <a href="blog-details.html">
+                                            @blog.Title
+                                        </a>
+                                    </h5>
+                                    <ul class="blog-meta">
+                                        <li><span>By: </span>@blog.Admin</li>
+                                        <li><span>On: </span>@blog.CreateDate.ToString("dd-MM-yyyy")</li>
+                                    </ul>
+                                    <a href="blog-details.html" class="read-more">Read More...</a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- blog single item start -->
-                        <!-- blog single item start -->
-                        <div class="blog-post-item">
-                            <div class="blog-thumb">
-                                <a href="blog-details.html">
-                                    <img src="~/assets/img/blog/blog-2.jpg" alt="blog thumb">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="blog-title">
-                                    <a href="blog-details.html">
-                                        Sotto Winner Offering Money To Any Man That Will Date Her
-                                    </a>
-                                </h5>
-                                <ul class="blog-meta">
-                                    <li><span>By: </span>Admin,</li>
-                                    <li><span>On: </span>14.07.2029</li>
-                                </ul>
-                                <a href="blog-details.html" class="read-more">Read More...</a>
-                            </div>
-                        </div>
-                        <!-- blog single item start -->
-                        <!-- blog single item start -->
-                        <div class="blog-post-item">
-                            <div class="blog-thumb">
-                                <a href="blog-details.html">
-                                    <img src="~/assets/img/blog/blog-3.jpg" alt="blog thumb">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="blog-title">
-                                    <a href="blog-details.html">
-                                        Children Left Home Alone For 4 Days In TV Series Experiment
-                                    </a>
-                                </h5>
-                                <ul class="blog-meta">
-                                    <li><span>By: </span>Admin,</li>
-                                    <li><span>On: </span>14.07.2029</li>
-                                </ul>
-                                <a href="blog-details.html" class="read-more">Read More...</a>
-                            </div>
-                        </div>
-                        <!-- blog single item start -->
-                        <!-- blog single item start -->
-                        <div class="blog-post-item">
-                            <div class="blog-thumb">
-                                <a href="blog-details.html">
-                                    <img src="~/assets/img/blog/blog-2.jpg" alt="blog thumb">
-                                </a>
-                            </div>
-                            <div class="blog-content">
-                                <h5 class="blog-title">
-                                    <a href="blog-details.html">
-                                        People Are Willing Lie When To Comes Money Research from
-                                    </a>
-                                </h5>
-                                <ul class="blog-meta">
-                                    <li><span>By: </span>Admin,</li>
-                                    <li><span>On: </span>14.07.2029</li>
-                                </ul>
-                                <a href="blog-details.html" class="read-more">Read More...</a>
-                            </div>
-                        </div>
-                        <!-- blog single item start -->
+
+                        }
+              
                     </div>
                 </div>
             </div>
@@ -486,31 +250,14 @@
             <div class="row">
                 <div class="col-12">
                     <div class="brand-active-carousel">
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="~/assets/img/brand/br1.png" alt="brand image">
-                            </a>
-                        </div>
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="~/assets/img/brand/br2.png" alt="brand image">
-                            </a>
-                        </div>
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="~/assets/img/brand/br3.png" alt="brand image">
-                            </a>
-                        </div>
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="~/assets/img/brand/br4.png" alt="brand image">
-                            </a>
-                        </div>
-                        <div class="brand-item">
-                            <a href="#">
-                                <img src="~/assets/img/brand/br5.png" alt="brand image">
-                            </a>
-                        </div>
+                        @foreach (var brand in Model.Brands)
+                        {
+                            <div class="brand-item">
+                                <a href="#">
+                                    <img src="~/assets/img/brand/@brand.Image" alt="brand image">
+                                </a>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
