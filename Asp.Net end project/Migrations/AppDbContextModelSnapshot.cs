@@ -254,6 +254,9 @@ namespace Asp.Net_end_project.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("DiscountPrice")
                         .HasColumnType("decimal(18,4)");
 
@@ -438,6 +441,24 @@ namespace Asp.Net_end_project.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Socials");
+                });
+
+            modelBuilder.Entity("Asp.Net_end_project.Models.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TagName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("Asp.Net_end_project.Models.TopSeller", b =>

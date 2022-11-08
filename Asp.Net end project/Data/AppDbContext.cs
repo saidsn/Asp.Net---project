@@ -32,6 +32,7 @@ namespace Asp.Net_end_project.Data
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Social> Socials { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
     }
 }

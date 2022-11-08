@@ -20,15 +20,19 @@ namespace Asp.Net_end_project.Controllers
         public async Task<IActionResult> Index()
         {
             IEnumerable<Blog> blogs = await _context.Blogs.Where(m => !m.IsDeleted).ToListAsync();
+            IEnumerable<Blog> recentPosts = await _context.Blogs.Where(m => !m.IsDeleted).OrderByDescending(m=>m.Id).ToListAsync();
             IEnumerable<Customer> customer = await _context.Customers
                 .Where(m => !m.IsDeleted)
                 .Include(m => m.Socials)
                 .ToListAsync();
+            IEnumerable<Tag> tags = await _context.Tags.Where(m => !m.IsDeleted).ToListAsync();
 
             BlogVM blogVM = new BlogVM
             {
                 Blogs = blogs,
                 Customers = customer,
+                ResentPosts = recentPosts,
+                Tags = tags,
 
             };
 

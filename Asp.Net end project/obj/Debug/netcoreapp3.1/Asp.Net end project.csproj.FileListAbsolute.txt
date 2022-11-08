@@ -153,3 +153,5 @@ C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewImports.cshtml.g.cs
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewStart.cshtml.g.cs
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\BlogDetail\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Dashboard\Index.cshtml.g.cs
