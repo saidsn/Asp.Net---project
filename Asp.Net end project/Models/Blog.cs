@@ -14,6 +14,9 @@ namespace Asp.Net_end_project.Models
         public string Admin { get; set; }
         public DateTime CreateDate { get; set; }
         public string Description { get; set; }
+        public string DescriptionSecond { get; set; }
+        public string DescriptionThird { get; set; }
+   
         [NotMapped]
         public IFormFile Photo { get; set; }
 

@@ -1,5 +1,6 @@
 ﻿using Asp.Net_end_project.Data;
 using Asp.Net_end_project.Models;
+using Asp.Net_end_project.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,20 @@ namespace Asp.Net_end_project.Controllers
         }
         public async Task<ActionResult> Index()
         {
-            return View();
+            IEnumerable<Product> products = await _context.Products
+                .Where(m => !m.IsDeleted)
+                .Include(m => m.ProductImages)
+                .ToListAsync();
+
+
+            ShopVM shopVM = new ShopVM
+            {
+                Products = products,
+
+            };
+            return View(shopVM);
+
+            
         }
     }
 }

@@ -55,17 +55,16 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="product-details-des">
-                                    <h3 class="pro-det-title">Primitive Mens Premium Shoes</h3>
+                                    <h3 class="pro-det-title">@Model.Products.Title</h3>
                                     <div class="pro-review">
                                         <span><a href="#">1 Review(s)</a></span>
                                     </div>
                                     <div class="price-box">
-                                        <span class="regular-price">$70.00</span>
-                                        <span class="old-price"><del>$80.00</del></span>
+                                        <span class="regular-price">$@((Model.Products.Price-((Model.Products.Price * Model.Products.DiscountPrice)/100)).ToString("##.00"))</span>
+                                        <span class="old-price"><del>$ @Model.Products.Price.ToString("##.00")</del></span>
                                     </div>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br>
-                                        Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.
+                                      @Model.Products.Description
                                     </p>
                                     <div class="quantity-cart-box d-flex align-items-center mb-20">
                                         <div class="quantity">
@@ -79,10 +78,10 @@
                                     </div>
                                     <div class="share-icon">
                                         <h5 class="cat-title">Share:</h5>
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#">@Html.Raw(Model.Settings["Facebook"])</a>
+                                        <a href="#">@Html.Raw(Model.Settings["Twitter"])</a>
+                                        <a href="#">@Html.Raw(Model.Settings["Linkedn"])</a>
+                                        <a href="#">@Html.Raw(Model.Settings["Instagram"])</a>
                                     </div>
                                 </div>
                             </div>

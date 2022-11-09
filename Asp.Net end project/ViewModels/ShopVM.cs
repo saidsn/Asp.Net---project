@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Asp.Net_end_project.ViewModels
 {
-    public class ProductDetailVM
+    public class ShopVM
     {
-        public Product Products { get; set; }
-        public Dictionary<string,string> Settings { get; set; }
+        public IEnumerable<Product> Products { get; set; }
     }
 }

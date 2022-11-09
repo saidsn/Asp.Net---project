@@ -1,3 +1,35 @@
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.AssemblyInfoInputs.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.AssemblyInfo.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.csproj.CoreCompileInputs.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorAssemblyInfo.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorAssemblyInfo.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\staticwebassets\Asp.Net end project.StaticWebAssets.Manifest.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\staticwebassets\Asp.Net end project.StaticWebAssets.xml
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\scopedcss\bundle\Asp.Net end project.styles.css
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.TagHelpers.input.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.TagHelpers.output.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorCoreGenerate.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewImports.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewStart.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\BlogDetail\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\ProductDetail\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorTargetAssemblyInfo.cache
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorTargetAssemblyInfo.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.dll
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.pdb
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\bin\Debug\netcoreapp3.1\Asp.Net end project.exe
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\bin\Debug\netcoreapp3.1\Asp.Net end project.deps.json
@@ -119,39 +151,7 @@ C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.AssemblyInfoInputs.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.AssemblyInfo.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.csproj.CoreCompileInputs.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorAssemblyInfo.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorAssemblyInfo.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\staticwebassets\Asp.Net end project.StaticWebAssets.Manifest.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\staticwebassets\Asp.Net end project.StaticWebAssets.xml
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\scopedcss\bundle\Asp.Net end project.styles.css
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.TagHelpers.input.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.TagHelpers.output.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorCoreGenerate.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Blog\Index.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\ProductDetail\Index.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Header\Default.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\Shop\Index.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorTargetAssemblyInfo.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.RazorTargetAssemblyInfo.cs
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.Views.pdb
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.csproj.CopyComplete
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.dll
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.pdb
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.genruntimeconfig.cache
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.csproj.AssemblyReference.cache
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewImports.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewStart.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Views\BlogDetail\Index.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shared\_AdminLayout.cshtml.g.cs
-C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Dashboard\Index.cshtml.g.cs

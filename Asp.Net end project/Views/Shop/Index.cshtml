@@ -1,4 +1,5 @@
-﻿
+﻿@model ShopVM
+
 @{
     ViewData["Title"] = "Shop Page";
 }
@@ -149,21 +150,24 @@
                         <!-- shop product top wrap start -->
                         <!-- product item list start -->
                         <div class="shop-product-wrap grid-view row mbn-50">
+                            @foreach (var item in Model.Products)
+                            {
                             <div class="col-lg-4 col-sm-6">
-                                <!-- product grid item start -->
+                                <!-- product grid item start -->        @*//xcndjihcudhjdhvjdhvjdhnvjdhvujdhv*@
                                 <div class="product-item mb-53">
+
                                     <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="~/assets/img/product/product-1.jpg" alt="">
+                                        <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@item.Id">
+                                            <img src="~/assets/img/product/@item.ProductImages.FirstOrDefault(m=>m.IsMain)?.Image" alt="">
                                         </a>
                                     </div>
                                     <div class="product-content">
                                         <h5 class="product-name">
-                                            <a href="product-details.html">Leather Mens Slipper</a>
+                                            <a href="product-details.html">@item.Title</a>
                                         </h5>
                                         <div class="price-box">
-                                            <span class="price-regular">$80.00</span>
-                                            <span class="price-old"><del>$70.00</del></span>
+                                            <span class="price-regular">$@((item.Price-((item.Price * item.DiscountPrice)/100)).ToString("##.00"))</span>
+                                            <span class="price-old"><del>$@item.Price.ToString("##.00")</del></span>
                                         </div>
                                         <div class="product-action-link">
                                             <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
@@ -179,17 +183,17 @@
                                 <!-- product list item start -->
                                 <div class="product-list-item mb-30">
                                     <div class="product-thumb">
-                                        <a href="product-details.html">
-                                            <img src="~/assets/img/product/product-1.jpg" alt="product thumb">
+                                        <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@item.Id">
+                                            <img src="~/assets/img/product/@item.ProductImages.FirstOrDefault(m=>m.IsMain)?.Image" alt="product thumb">
                                         </a>
                                     </div>
                                     <div class="product-content-list">
                                         <h5 class="product-name">
-                                            <a href="product-details.html">Leather Mens Slipper</a>
+                                            <a href="product-details.html">@item.Title</a>
                                         </h5>
                                         <div class="price-box">
-                                            <span class="price-regular">$80.00</span>
-                                            <span class="price-old"><del>$70.00</del></span>
+                                            <span class="price-regular">$@((item.Price-((item.Price * item.DiscountPrice)/100)).ToString("##.00"))</span>
+                                            <span class="price-old"><del>$@item.Price.ToString("##.00")</del></span>
                                         </div>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere
@@ -208,9 +212,11 @@
                                 </div>
                                 <!-- product list item start -->
                             </div>
-                            <div class="col-lg-4 col-sm-6">
+
+                            }
+                            <!--<div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-2.jpg" alt="">
@@ -233,10 +239,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-2.jpg" alt="product thumb">
@@ -264,12 +270,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-3.jpg" alt="">
@@ -292,10 +298,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-3.jpg" alt="product thumb">
@@ -323,12 +329,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-4.jpg" alt="">
@@ -351,10 +357,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-4.jpg" alt="product thumb">
@@ -382,12 +388,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-5.jpg" alt="">
@@ -410,10 +416,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-5.jpg" alt="product thumb">
@@ -441,12 +447,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-6.jpg" alt="">
@@ -469,10 +475,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-6.jpg" alt="product thumb">
@@ -500,12 +506,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-7.jpg" alt="">
@@ -528,10 +534,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-7.jpg" alt="product thumb">
@@ -559,12 +565,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-8.jpg" alt="">
@@ -587,10 +593,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-8.jpg" alt="product thumb">
@@ -618,12 +624,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-9.jpg" alt="">
@@ -646,10 +652,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-9.jpg" alt="product thumb">
@@ -677,12 +683,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-10.jpg" alt="">
@@ -705,10 +711,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-10.jpg" alt="product thumb">
@@ -736,12 +742,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-11.jpg" alt="">
@@ -764,10 +770,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-11.jpg" alt="product thumb">
@@ -795,12 +801,12 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
+                            <!--</div>
+                            <div class="col-lg-4 col-sm-6">-->
                                 <!-- product grid item start -->
-                                <div class="product-item mb-53">
+                                <!--<div class="product-item mb-53">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-12.jpg" alt="">
@@ -823,10 +829,10 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product grid item end -->
                                 <!-- product list item start -->
-                                <div class="product-list-item mb-30">
+                                <!--<div class="product-list-item mb-30">
                                     <div class="product-thumb">
                                         <a href="product-details.html">
                                             <img src="~/assets/img/product/product-12.jpg" alt="product thumb">
@@ -854,9 +860,9 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!-- product list item start -->
-                            </div>
+                            <!--</div>-->
                         </div>
                         <!-- product item list end -->
                         <!-- start pagination area -->
