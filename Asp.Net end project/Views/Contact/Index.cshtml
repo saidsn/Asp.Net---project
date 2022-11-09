@@ -1,4 +1,4 @@
-﻿@model Contact
+﻿@model ContactVM
 @{
     ViewData["Title"] = "Contact Page";
 }
@@ -62,19 +62,19 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-info pt-0">
-                        <h2 class="contact-title">@Model.Title</h2>
+                        <h2 class="contact-title">@Model.Contact.Title</h2>
                         <p>
-                          @Model.Description
+                          @Model.Contact.Description
                         </p>
                         <ul>
-                            <li><i class="fa fa-fax"></i>@Model.Address</li>
-                            <li><i class="fa fa-phone"></i>@Model.Email</li>
-                            <li><i class="fa fa-envelope-o"></i>@Model.Phone</li>
+                            <li><i class="fa fa-fax"></i>@Model.Contact.Address</li>
+                            <li><i class="fa fa-phone"></i>@Model.Contact.Email</li>
+                            <li><i class="fa fa-envelope-o"></i>@Model.Contact.Phone</li>
                         </ul>
                         <div class="working-time">
                             <h3>Working Hours</h3>
                             <p class="pb-0">
-                                @Html.Raw(Model.WorkingHours)
+                                @Html.Raw(Model.Contact.WorkingHours)
                             </p>
                         </div>
                     </div>

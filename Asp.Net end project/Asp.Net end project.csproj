@@ -10,6 +10,8 @@
     <Compile Remove="Migrations\20221105132357_CreateSocialTable.Designer.cs" />
     <Compile Remove="Migrations\20221107142108_CreateSocialandCustomertable.cs" />
     <Compile Remove="Migrations\20221107142108_CreateSocialandCustomertable.Designer.cs" />
+    <Compile Remove="Migrations\20221109135125_CreateSendMessageTable.cs" />
+    <Compile Remove="Migrations\20221109135125_CreateSendMessageTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

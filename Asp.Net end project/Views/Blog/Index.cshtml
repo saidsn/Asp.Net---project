@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="recent-posts-body">
                                             <span class="recent-posts-meta">@item.CreateDate.ToString("dd MMMM yyyy")</span>
-                                            <h6 class="recent-posts-title"><a href="blog-details.html">@item.Title</a></h6>
+                                            <h6 class="recent-posts-title"><a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id">@item.Title</a></h6>
                                         </div>
                                     </li>
                                 }
@@ -128,7 +128,7 @@
                                     </div>
                                     <div class="blog-content">
                                         <h5 class="blog-title">
-                                            <a href="blog-details.html">
+                                            <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id">
                                                 @item.Title
                                             </a>
                                         </h5>

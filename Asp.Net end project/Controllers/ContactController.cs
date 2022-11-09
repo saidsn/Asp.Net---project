@@ -1,5 +1,6 @@
 ﻿using Asp.Net_end_project.Data;
 using Asp.Net_end_project.Models;
+using Asp.Net_end_project.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,7 +20,16 @@ namespace Asp.Net_end_project.Controllers
         public async Task<IActionResult> Index()
         {
             Contact contact = await _context.Contacts.Where(m => !m.IsDeleted).FirstOrDefaultAsync();
-            return View(contact);
+            SendMessage sendMessage = await _context.SendMessages.Where(m => !m.IsDeleted).FirstOrDefaultAsync();
+
+            ContactVM contactVM = new ContactVM
+            {
+                Contact = contact,
+                SendMessage = sendMessage,
+
+            };
+
+            return View(contactVM);
         }
     }
 }

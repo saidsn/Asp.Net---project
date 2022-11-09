@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="recent-posts-body">
                                             <span class="recent-posts-meta">@item.CreateDate.ToString("dd MMMM yyyy")</span>
-                                            <h6 class="recent-posts-title"><a href="blog-details.html">@item.Title</a></h6>
+                                            <h6 class="recent-posts-title"><a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id">@item.Title</a></h6>
                                         </div>
                                     </li>
                                 }
@@ -123,9 +123,7 @@
                                         <li><span>By: </span>@Model.Blog.Admin</li>
                                         <li><span>On: </span>@Model.Blog.CreateDate.ToString("dd.MM.yyyy") </li>
                                     </ul>
-                                    <p>
-                                        @Html.Raw(Model.Blog.Description)
-                                    </p>
+                             
                                     <p>
                                         @Model.Blog.Description
                                     </p>
