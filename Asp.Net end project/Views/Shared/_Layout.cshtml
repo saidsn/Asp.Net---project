@@ -42,8 +42,6 @@
     <!-- Start Footer Area -->
     @await Component.InvokeAsync("Footer")
     <!-- end Footer Area -->
-
-
     <!--=======================Javascript============================-->
     <!--=== All Vendor Js ===-->
     <script src="~/assets/js/vendor.js"></script>
@@ -51,6 +49,7 @@
     <script src="~/assets/js/plugins.js"></script>
     <!--=== Active Js ===-->
     <script src="~/assets/js/active.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 
 
@@ -60,4 +59,4 @@
 
 
 
-@RenderSection("Scripts", required: false)
+

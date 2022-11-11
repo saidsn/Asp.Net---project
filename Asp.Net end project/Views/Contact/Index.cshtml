@@ -31,30 +31,32 @@
                 <div class="col-lg-6">
                     <div class="contact-message">
                         <h2 class="contact-title">tell us your project</h2>
-                        <form id="contact-form" action="http://whizthemes.com/mail-php/genger/mail.php" method="post" class="contact-form">
+                        <form id="contact-form" asp-controller="Contact" asp-action="Index" method="post" class="contact-form">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input name="first_name" placeholder="Name *" type="text" required>
+                                    <input  placeholder="Name *" type="text" asp-for="SendMessage.Name">
+                                    <span class="text-danger" asp-validation-for="SendMessage.Name" ></span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input name="phone" placeholder="Phone *" type="text" required>
+                                    <input placeholder="Phone *" type="text" asp-for="SendMessage.Phone">
+                                    <span class="text-danger" asp-validation-for="SendMessage.Phone"></span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input name="email_address" placeholder="Email *" type="text" required>
+                                    <input placeholder="Email *" type="text" asp-for="SendMessage.Email">
+                                    <span class="text-danger" asp-validation-for="SendMessage.Email"></span>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <input name="contact_subject" placeholder="Subject *" type="text">
+                                    <input  placeholder="Subject *" type="text" asp-for="SendMessage.Subject">
+                                    <span class="text-danger" asp-validation-for="SendMessage.Subject"></span>
                                 </div>
                                 <div class="col-12">
                                     <div class="contact2-textarea text-center">
-                                        <textarea placeholder="Message *" name="message" class="form-control2" required=""></textarea>
+                                        <input asp-for="SendMessage.Message" placeholder="Message *" type="text" class="form-control2">
+                                        <span class="text-danger" asp-validation-for="SendMessage.Message"></span>
                                     </div>
                                     <div class="contact-btn">
                                         <button class="btn" type="submit">Send Message</button>
                                     </div>
-                                </div>
-                                <div class="col-12 d-flex justify-content-center">
-                                    <p class="form-messege"></p>
                                 </div>
                             </div>
                         </form>

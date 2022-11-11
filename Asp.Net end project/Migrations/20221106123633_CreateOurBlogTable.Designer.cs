@@ -232,6 +232,7 @@ namespace Asp.Net_end_project.Migrations
 
                     b.HasKey("Id");
 
+
                     b.ToTable("Sellers");
                 });
 

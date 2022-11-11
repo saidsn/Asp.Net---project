@@ -32,7 +32,7 @@ namespace Asp.Net_end_project.Services
         }
         public async Task<IEnumerable<Categories>> GetDatasFromCategories()
         {
-            return await _context.Categories.Where(m => !m.IsDeleted).ToListAsync();
+            return await _context.Categories.Where(m => !m.IsDeleted).Take(6).ToListAsync();
         }
 
     }

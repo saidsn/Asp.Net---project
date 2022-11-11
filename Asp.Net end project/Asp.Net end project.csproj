@@ -12,9 +12,24 @@
     <Compile Remove="Migrations\20221107142108_CreateSocialandCustomertable.Designer.cs" />
     <Compile Remove="Migrations\20221109135125_CreateSendMessageTable.cs" />
     <Compile Remove="Migrations\20221109135125_CreateSendMessageTable.Designer.cs" />
+    <Compile Remove="Migrations\20221110173013_AddIdentityTables.cs" />
+    <Compile Remove="Migrations\20221110173013_AddIdentityTables.Designer.cs" />
+    <Compile Remove="Migrations\20221110173521_AddIdentitytables.cs" />
+    <Compile Remove="Migrations\20221110173521_AddIdentitytables.Designer.cs" />
+    <Compile Remove="Migrations\20221110174241_AddIdentitytables.cs" />
+    <Compile Remove="Migrations\20221110174241_AddIdentitytables.Designer.cs" />
+    <Compile Remove="Migrations\20221111051549_CreatedIdentity.cs" />
+    <Compile Remove="Migrations\20221111051549_CreatedIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20221111052601_CreatedIdentity.cs" />
+    <Compile Remove="Migrations\20221111052601_CreatedIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20221111052621_CreatedIdentity.cs" />
+    <Compile Remove="Migrations\20221111052621_CreatedIdentity.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.3.0" />
+    <PackageReference Include="MailKit" Version="3.4.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.29" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.29" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.29">
       <PrivateAssets>all</PrivateAssets>
