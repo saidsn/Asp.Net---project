@@ -157,8 +157,8 @@
                             {
                                 <div class="col-lg-4 col-sm-6">
                                     <!-- product grid item start -->
-                                    <div class="product-item mb-53" data-id="@product.CategoriesId">
-
+                                    <div class="product-item mb-53 basket-product" data-id="@product.CategoriesId">
+                                        <input type="hidden" class="product-id" value="@product.Id" />
                                         <div class="product-thumb">
                                             <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@product.Id">
                                                 <img src="~/assets/img/product/@product.ProductImages.FirstOrDefault(m=>m.IsMain)?.Image" alt="">
@@ -174,7 +174,7 @@
                                             </div>
                                             <div class="product-action-link">
                                                 <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                                <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
+                                                <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
                                                 <a href="#" data-toggle="modal" data-target="#quick_view">
                                                     <span data-toggle="tooltip"
                                                           title="Quick View"><i class="ion-ios-eye-outline"></i></span>
@@ -184,7 +184,8 @@
                                     </div>
                                     <!-- product grid item end -->
                                     <!-- product list item start -->
-                                    <div class="product-list-item mb-30" data-id="@product.CategoriesId">
+                                    <div class="product-list-item mb-30 basket-product" data-id="@product.CategoriesId">
+                                        <input type="hidden" class="product-id" value="@product.Id" />
                                         <div class="product-thumb">
                                             <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@product.Id">
                                                 <img src="~/assets/img/product/@product.ProductImages.FirstOrDefault(m=>m.IsMain)?.Image" alt="product thumb">
@@ -205,7 +206,7 @@
                                             </p>
                                             <div class="product-link-2 position-static">
                                                 <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
-                                                <a href="#" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
+                                                <a class="add-to-cart" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
                                                 <a href="#" data-toggle="modal" data-target="#quick_view">
                                                     <span data-toggle="tooltip"
                                                           title="Quick View"><i class="ion-ios-eye-outline"></i></span>

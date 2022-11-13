@@ -1,5 +1,40 @@
+
+
 (function ($) {
 	"use strict";
+
+	$(document).on("click", ".add-to-cart", function () {
+		console.log("ok")
+		let productId = parseInt($(this).closest(".basket-product").children(0).val());
+		let data = { id: productId }
+
+		console.log(productId)
+
+		$.ajax({
+			url: "/home/addbasket",
+			type: "Post",
+			data: data,
+			content: "application/x-www-from-urlencoded",
+			success: function (res) {
+
+				Swal.fire({
+					icon: 'success',
+					title: 'Product added',
+					showConfirmButton: false,
+					timer: 1200
+				})
+			}
+
+
+		});
+
+	});
+
+
+
+
+
+
 
 	// Sticky menu 
 	var $window = $(window);

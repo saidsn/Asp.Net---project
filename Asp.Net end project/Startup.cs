@@ -30,6 +30,11 @@ namespace Asp.Net_end_project
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddSession(option =>
+            {
+                option.IdleTimeout = TimeSpan.FromSeconds(25); // Saytda Session yaradir
+            });
+
             services.AddIdentity<AppUser, IdentityRole>()
                     .AddEntityFrameworkStores<AppDbContext>()
                     .AddDefaultTokenProviders();
@@ -68,6 +73,8 @@ namespace Asp.Net_end_project
     
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 

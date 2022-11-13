@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Service>
+
+@{ ViewData["Title"] = "Service"; }
+
+<div class="container-fluid my-3 mx-3">
+    <div class="col-lg-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title" style="text-align:center;color:blue">- Index -</h2>
+                <div class="create-btn mb-3">
+                    <a asp-area="AdminArea" asp-controller="Service" asp-action="Create" class="btn btn-success"><i class="fa-solid fa-plus"></i></a>
+                </div>
+                <div class="table-responsive pt-3">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+
+                                <th>
+                                    Image
+                                </th>
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Color
+                                </th>
+                                <th>
+                                    Settings
+                                </th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            @foreach (var service in Model)
+                            {
+                            <tr class="table-info">
+
+                                <td>
+                                    <img style="width:100px; height:100px;border-radius:0 !important " src="~/assets/img/icon/@service.Image" alt="slider" />
+                                </td>
+                                <td>
+                                    @service.Title
+                                </td>
+                                <td style="width:350px">
+                                    @service.Description
+                                </td>
+                                <td>
+                                    @service.Color
+                                </td>
+                                <td id="parent-image" style="text-align: center;">
+                                    <a asp-action="Detail" asp-route-id="@service.Id" class="btn btn-info"><i class="mdi mdi-information mx-0 text-white"></i></a>
+                                    <a asp-action="Update" asp-route-id="@service.Id" class="btn btn-primary"><i class="mdi mdi-table-edit"></i></a>
+                                    <form id="parent-image" style="display: inline-block;" asp-action="Delete" asp-route-id="@service.Id" method="post">
+                                        <button data-id="@service.Id" type="submit" class="btn btn-danger"><i class="mdi mdi-delete-forever"></i></button>
+                                    </form>
+                                </td>
+                            </tr>}
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
