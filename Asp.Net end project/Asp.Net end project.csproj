@@ -401,8 +401,4 @@
     <None Include="wwwroot\ckeditor\vendor\promise.js" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModels\ServiceViewModels\" />
-  </ItemGroup>
-
 </Project>

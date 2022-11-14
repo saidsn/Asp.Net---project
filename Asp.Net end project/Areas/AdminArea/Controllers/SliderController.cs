@@ -1,6 +1,7 @@
 ﻿using Asp.Net_end_project.Data;
 using Asp.Net_end_project.Helpers;
 using Asp.Net_end_project.Models;
+using Asp.Net_end_project.ViewModels.SliderViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

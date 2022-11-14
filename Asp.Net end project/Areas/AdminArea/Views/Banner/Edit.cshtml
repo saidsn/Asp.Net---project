@@ -1,0 +1,50 @@
+﻿@model Banner
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h3 style="color:blue; text-align:center">- Edit Banner -</h3>
+
+                    <form asp-controller="Banner" asp-action="Edit" class="forms-sample" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <div>
+                                <label for="exampleInputUsername1">Image</label>
+                                <input class="form-control" asp-for="Photo">
+                                <span class="text-danger" asp-validation-for="Photo"></span>
+                            </div>
+                            <div>
+                                <label for="exampleInputUsername1">SubTitle</label>
+                                <textarea class="form-control rounded-0" asp-for="SubTitle" id="SubTitle-area" rows="10"></textarea>
+                                <span class="text-danger" asp-validation-for="SubTitle"></span>
+                            </div>
+                            <div>
+                                <label for="exampleInputUsername1">Title</label>
+
+                                <textarea class="form-control rounded-0" asp-for="Title" id="Title-area" rows="10"></textarea>
+                                <span class="text-danger" asp-validation-for="Title"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary me-2">Edit</button>
+                        <a asp-controller="Banner" asp-action="Index" class="btn btn-light">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationPartial" />
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace("SubTitle-area")
+        CKEDITOR.replace("Title-area")
+    </script>
+}
+

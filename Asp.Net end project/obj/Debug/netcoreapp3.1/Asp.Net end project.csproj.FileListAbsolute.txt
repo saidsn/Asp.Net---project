@@ -188,3 +188,21 @@ C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.csproj.CopyComplete
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Asp.Net end project.genruntimeconfig.cache
 C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Slider\Edit.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Service\Create.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Service\Edit.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Category\Detail.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Category\Create.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Category\Edit.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\SingleBanner\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\SingleBanner\Create.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\SingleBanner\Detail.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\SingleBanner\Edit.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Banner\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Banner\Detail.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Banner\Create.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Banner\Edit.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Brand\Index.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Brand\Create.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Brand\Detail.cshtml.g.cs
+C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Brand\Edit.cshtml.g.cs

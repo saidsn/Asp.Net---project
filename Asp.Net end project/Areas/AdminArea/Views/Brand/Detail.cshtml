@@ -1,0 +1,29 @@
+﻿@model Brand
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <div class="table-responsive pt-3">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr class="table-info">
+                    <td>
+                        <img style="width:250px; height:150px;border-radius:0 !important " src="~/assets/img/brand/@Model.Image" alt="slider" />
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <a asp-controller="Brand" asp-action="Index" class="btn btn-primary my-3">Back</a>
+</div>
+

@@ -67,7 +67,7 @@ namespace Asp.Net_end_project.Controllers
                 return View(registerVM);
             }
 
-            //await _userManager.AddToRoleAsync(user, Roles.Admin.ToString());
+           
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
@@ -225,16 +225,16 @@ namespace Asp.Net_end_project.Controllers
 
 
 
-        //public async Task CreateRoles()
-        //{
-        //    foreach (var role in Enum.GetValues(typeof(Roles)))
-        //    {
-        //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
-        //        {
-        //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
-        //        }
-        //    }
-        //}
+        public async Task CreateRoles()
+        {
+            foreach (var role in Enum.GetValues(typeof(Roles)))
+            {
+                if (!await _roleManager.RoleExistsAsync(role.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+                }
+            }
+        }
 
     }
 }

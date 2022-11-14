@@ -1,4 +1,5 @@
-﻿@model BlogVM
+﻿@model Paginate<BlogVM>
+
 @{
     ViewData["Title"] = "Blog Page";
 }
@@ -31,24 +32,27 @@
                 <div class="col-lg-3 order-2 order-lg-1">
                     <div class="blog-widget-wrapper">
                         <!-- widget item start -->
-                        @foreach (var item in Model.Customers)
+                        @foreach (var customer in Model.Datas)
                         {
-                            <div class="blog-widget">
-                                <div class="blog-widget-img">
-                                    <img src="~/assets/img/blog/@item.Image" alt="author thumb" />
-                                </div>
-                                <div class="blog-author-title text-center">
-                                    <h5>@item.BlogAuthor</h5>
-                                    <span>@item.Position</span>
-                                    <div class="blog-widget-icon">
-                                        @foreach (var icon in item.Socials)
-                                        {
-                                            
-                                            <a href="#"><i class="fa fa-@icon.Image"></i></a>
-                                        }
+                            @foreach (var customer1 in customer.Customers)
+                            {
+                                <div class="blog-widget">
+                                    <div class="blog-widget-img">
+                                        <img src="~/assets/img/blog/@customer1.Image" alt="author thumb" />
+                                    </div>
+                                    <div class="blog-author-title text-center">
+                                        <h5>@customer1.BlogAuthor</h5>
+                                        <span>@customer1.Position</span>
+
+                                        <div class="blog-widget-icon">
+                                            @foreach (var icon in customer1.Socials)
+                                            {
+                                                <a href="#"><i class="fa fa-@icon.Image"></i></a>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            }
                         }
 
                         <!-- widget item end -->
@@ -65,20 +69,23 @@
                         <div class="blog-widget">
                             <h4 class="blog-widget-title">Recent Posts</h4>
                             <ul class="recent-posts-inner">
-                                @foreach (var item in Model.ResentPosts)
+                                @foreach (var post in Model.Datas)
                                 {
-                                    <li class="recent-posts">
-                                        <div class="recent-posts-image">
-                                            <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id"><img src="~/assets/img/blog/@item.Image" alt="post thumb"></a>
-                                        </div>
-                                        <div class="recent-posts-body">
-                                            <span class="recent-posts-meta">@item.CreateDate.ToString("dd MMMM yyyy")</span>
-                                            <h6 class="recent-posts-title"><a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id">@item.Title</a></h6>
-                                        </div>
-                                    </li>
+                                    @foreach (var post1 in post.ResentPosts)
+                                    {
+                                        <li class="recent-posts">
+                                            <div class="recent-posts-image">
+                                                <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@post1.Id"><img src="~/assets/img/blog/@post1.Image" alt="post thumb"></a>
+                                            </div>
+                                            <div class="recent-posts-body">
+                                                <span class="recent-posts-meta">@post1.CreateDate.ToString("dd MMMM yyyy")</span>
+                                                <h6 class="recent-posts-title"><a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@post1.Id">@post1.Title</a></h6>
+                                            </div>
+                                        </li>
+                                    }
                                 }
 
-                          
+
                             </ul>
                         </div>
                         <!-- widget item end -->
@@ -99,10 +106,13 @@
                         <div class="blog-widget">
                             <h4 class="blog-widget-title">Tags</h4>
                             <div class="blog-tag">
-                                @foreach (var tag in Model.Tags)
+                                @foreach (var tag in Model.Datas)
                                 {
-                                    <a asp-controller="BlogDetail" asp-action="Index">@tag.TagName</a>
+                                    @foreach (var tag1 in tag.Tags)
+                                    {
+                                        <a asp-controller="BlogDetail" asp-action="Index">@tag1.TagName</a>
 
+                                    }
                                 }
 
                             </div>
@@ -112,90 +122,96 @@
                 </div>
                 <div class="col-lg-9 order-1 order-lg-2">
                     <div class="row">
-                   
-
-
-
-                        @foreach (var item in Model.Blogs)
+                        @foreach (var blog in Model.Datas)
                         {
-                            <div class="col-md-6">
-                                <!-- blog single item start -->
-                                <div class="blog-post-item mb-30">
-                                    <div class="blog-thumb">
-                                        <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id" >
-                                            <img src="~/assets/img/blog/@item.Image" alt="blog thumb">
-                                        </a>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h5 class="blog-title">
-                                            <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@item.Id">
-                                                @item.Title
+                            @foreach (var blog1 in blog.Blogs)
+                            {
+                                <div class="col-md-6">
+                                    <!-- blog single item start -->
+                                    <div class="blog-post-item mb-30">
+                                        <div class="blog-thumb">
+                                            <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@blog1.Id">
+                                                <img src="~/assets/img/blog/@blog1.Image" alt="blog thumb">
                                             </a>
-                                        </h5>
-                                        <ul class="blog-meta">
-                                            <li><span>By: </span>@item.Admin</li>
-                                            <li><span>On: </span>@item.CreateDate.ToString("dd-MM-yyyy")</li>
-                                        </ul>
-                                        <a href="blog-details.html" class="read-more">Read More...</a>
+                                        </div>
+                                        <div class="blog-content">
+                                            <h5 class="blog-title">
+                                                <a asp-controller="BlogDetail" asp-action="Index" asp-route-id="@blog1.Id">
+                                                    @blog1.Title
+                                                </a>
+                                            </h5>
+                                            <ul class="blog-meta">
+                                                <li><span>By: </span>@blog1.Admin</li>
+                                                <li><span>On: </span>@blog1.CreateDate</li>
+                                            </ul>
+                                            <a href="blog-details.html" class="read-more">Read More...</a>
+                                        </div>
                                     </div>
+                                    <!-- blog single item start -->
                                 </div>
-                                <!-- blog single item start -->
-                            </div>
+
+                            }
                         }
-                           <div class="col-md-6">
-                                <!-- blog single item start -->
-                                <div class="blog-post-item mb-30">
-                                    <div class="blog-thumb embed-responsive embed-responsive-16by9">
-                                        <iframe src="https://www.youtube.com/embed/4qNHr0W6F0o" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h5 class="blog-title">
-                                            <a href="blog-details.html">
-                                                Children Left Home Alone For 4 Days In TV Series Experiment
-                                            </a>
-                                        </h5>
-                                        <ul class="blog-meta">
-                                            <li><span>By: </span>Admin,</li>
-                                            <li><span>On: </span>14.07.2029</li>
-                                        </ul>
-                                        <a href="blog-details.html" class="read-more">Read More...</a>
-                                    </div>
+                        <div class="col-md-6">
+                            <!-- blog single item start -->
+                            <div class="blog-post-item mb-30">
+                                <div class="blog-thumb embed-responsive embed-responsive-16by9">
+                                    <iframe src="https://www.youtube.com/embed/4qNHr0W6F0o" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                 </div>
-                                <!-- blog single item start -->
-                            </div>
-                            <div class="col-md-6">
-                                <!-- blog single item start -->
-                                <div class="blog-post-item mb-30">
-                                    <div class="blog-thumb embed-responsive embed-responsive-16by9">
-                                        <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/501298839&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h5 class="blog-title">
-                                            <a href="blog-details.html">
-                                                People Are Willing Lie When To Comes Money Research from
-                                            </a>
-                                        </h5>
-                                        <ul class="blog-meta">
-                                            <li><span>By: </span>Admin,</li>
-                                            <li><span>On: </span>14.07.2029</li>
-                                        </ul>
-                                        <a href="blog-details.html" class="read-more">Read More...</a>
-                                    </div>
+                                <div class="blog-content">
+                                    <h5 class="blog-title">
+                                        <a href="blog-details.html">
+                                            Children Left Home Alone For 4 Days In TV Series Experiment
+                                        </a>
+                                    </h5>
+                                    <ul class="blog-meta">
+                                        <li><span>By: </span>Admin,</li>
+                                        <li><span>On: </span>14.07.2029</li>
+                                    </ul>
+                                    <a href="blog-details.html" class="read-more">Read More...</a>
                                 </div>
-                                <!-- blog single item start -->
                             </div>
+                            <!-- blog single item start -->
+                        </div>
+                        <div class="col-md-6">
+                            <!-- blog single item start -->
+                            <div class="blog-post-item mb-30">
+                                <div class="blog-thumb embed-responsive embed-responsive-16by9">
+                                    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/501298839&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                                </div>
+                                <div class="blog-content">
+                                    <h5 class="blog-title">
+                                        <a href="blog-details.html">
+                                            People Are Willing Lie When To Comes Money Research from
+                                        </a>
+                                    </h5>
+                                    <ul class="blog-meta">
+                                        <li><span>By: </span>Admin,</li>
+                                        <li><span>On: </span>14.07.2029</li>
+                                    </ul>
+                                    <a href="blog-details.html" class="read-more">Read More...</a>
+                                </div>
+                            </div>
+                            <!-- blog single item start -->
+                        </div>
 
                     </div>
                     <!-- start pagination area -->
-                    <div class="paginatoin-area text-center">
-                        <ul class="pagination-box">
-                            <li><a class="Previous" href="#"><i class="ion-ios-arrow-left"></i></a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a class="Next" href="#"><i class="ion-ios-arrow-right"></i></a></li>
+                    <nav class="my-5" aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center my-5">
+                            <li class="page-item @(Model.HasPrevious == false ? "disabled":"")">
+                                <a class="page-link" asp-action="Index" asp-route-page="@(Model.Currentpage - 1)"><i class="ion-ios-arrow-left"></i></a>
+                            </li>
+                            @for (int i = 1; i <= Model.TotalPage; i++)
+                            {
+                                <li class="page-item @(i==Model.Currentpage ? "disabled":"")"><a class="page-link" asp-action="Index" asp-route-page="@i">@i</a></li>
+                            }
+
+                            <li class="page-item @(Model.HasNext == true ? "":"disabled")">
+                                <a class="page-link" asp-action="Index" asp-route-page="@(Model.Currentpage + 1)"><i class="ion-ios-arrow-right"></i></a>
+                            </li>
                         </ul>
-                    </div>
+                    </nav>
                     <!-- end pagination area -->
                 </div>
             </div>

@@ -33,8 +33,15 @@ using Asp.Net_end_project.ViewModels.SliderViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\Areas\AdminArea\Views\_ViewImports.cshtml"
+using Asp.Net_end_project.ViewModels.BlogViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d", @"/Areas/AdminArea/Views/Slider/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8b372b41570a1edde13fe43b23237bc7cb8955a9", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"09be5e9faff562395cdd3b7d29e1093b0350f411", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     public class Areas_AdminArea_Views_Slider_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Slider>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "AdminArea", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -96,7 +103,7 @@ using Asp.Net_end_project.ViewModels.SliderViewModels;
                 <h2 class=""card-title"" style=""text-align:center;color:blue"">- Index -</h2>
                 <div class=""create-btn mb-3"">
                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d9284", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d9553", async() => {
                 WriteLiteral("<i class=\"fa-solid fa-plus\"></i>");
             }
             );
@@ -152,7 +159,7 @@ using Asp.Net_end_project.ViewModels.SliderViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("                <tr class=\"table-info\">\n\n\n                    <td>\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d12282", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d12551", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -201,7 +208,7 @@ AddHtmlAttributeValue("", 1662, slider.Image, 1662, 13, false);
 #line hidden
 #nullable disable
             WriteLiteral("\n                    </td>\n                    <td id=\"parent-image\" style=\"text-align: center;\">\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d15274", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d15543", async() => {
                 WriteLiteral("<i class=\"mdi mdi-information mx-0 text-white\"></i>");
             }
             );
@@ -233,7 +240,7 @@ AddHtmlAttributeValue("", 1662, slider.Image, 1662, 13, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d17643", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d17912", async() => {
                 WriteLiteral("<i class=\"mdi mdi-table-edit\"></i>");
             }
             );
@@ -265,7 +272,7 @@ AddHtmlAttributeValue("", 1662, slider.Image, 1662, 13, false);
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\n                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d19993", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09d839e05e7783a1d72a30f2fbbdf1dc8ed4f75d20262", async() => {
                 WriteLiteral("\n                            <button data-id=\"");
 #nullable restore
 #line 60 "C:\Users\OMEN\OneDrive\İş masası\Asp.Net end project\Asp.Net end project\Asp.Net end project\Areas\AdminArea\Views\Slider\Index.cshtml"

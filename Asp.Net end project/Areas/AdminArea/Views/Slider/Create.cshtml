@@ -1,4 +1,4 @@
-﻿@model Slider 
+﻿@model Slider
 @{
     ViewData["Title"] = "Create";
 }
@@ -22,14 +22,12 @@
 
                             <div>
                                 <label for="exampleInputUsername1">Sale</label>
-                              
                                 <textarea class="form-control rounded-0" asp-for="Sale" id="Sale-area" rows="10"></textarea>
                                 <span class="text-danger" asp-validation-for="Sale"></span>
                             </div>
 
                             <div>
-                                <label for="exampleInputUsername1">Header</label>
-                              
+                                <label for="exampleInputUsername1">Title</label>
                                 <textarea class="form-control rounded-0" asp-for="Title" id="Title-area" rows="10"></textarea>
                                 <span class="text-danger" asp-validation-for="Title"></span>
                             </div>

@@ -18,9 +18,9 @@
                             <div class="hero-single-slide">
                                 <div class="hero-slider-item bg-img" style="background-image: url(~/../assets/img/slider/@slider.Image)" data-bg="assets/img/slider/slider-1.jpg">
                                     <div class="hero-slider-content slide-1">
-                                        <h5 class="slide-subtitle">@slider.Sale</h5>
-                                        <h2 class="slide-title">@slider.Title</h2>
-                                        <p class="slide-desc">@slider.Description</p>
+                                        <h5 class="slide-subtitle">@Html.Raw(slider.Sale)</h5>
+                                        <h2 class="slide-title">@Html.Raw(slider.Title)</h2>
+                                        <p class="slide-desc">@Html.Raw(slider.Description) </p>
                                         <a href="shop.html" class="btn btn-hero">SHOP NOW</a>
                                     </div>
                                 </div>
@@ -42,13 +42,13 @@
                 @foreach (var service in Model.Services)
                 {
                     <div class="col-lg-4">
-                        <div style="background-color:@service.Color" class="service-policy-item mt-30 bg-1">
+                        <div style="background-color:@Html.Raw(service.Color)" class="service-policy-item mt-30 bg-1">
                             <div class="policy-icon">
                                 <img src="~/assets/img/icon/@service.Image" alt="policy icon">
                             </div>
                             <div class="policy-content">
-                                <h5 class="policy-title">@service.Title</h5>
-                                <p class="policy-desc">@service.Description</p>
+                                <h5 class="policy-title">@Html.Raw(service.Title)</h5>
+                                <p class="policy-desc">@Html.Raw(service.Description)</p>
                             </div>
                         </div>
                     </div>
@@ -126,11 +126,12 @@
                     <div class="col-md-6">
                         <div class="img-container mt-30">
                             <a href="product-details.html">
-                                <img src="~/assets/img/banner/@banner.Image" alt="banner-image">
+                                <img src="~/assets/img/banner/@Html.Raw(banner.Image)" alt="banner-image">
                             </a>
                             <div class="banner-text">
-                                <h5 class="banner-subtitle">@banner.SubTitle</h5>
-                                <h3 class="banner-title">20% Off<br>@banner.Title</h3>
+                                <h5 class="banner-subtitle">@Html.Raw(banner.SubTitle)</h5>
+                                @Html.Raw(banner.Title)
+                             
                             </div>
                         </div>
                     </div>

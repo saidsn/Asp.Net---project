@@ -18,5 +18,21 @@ namespace Asp.Net_end_project.Helpers
             Currentpage = currentPage;
             TotalPage = totalPage;
         }
+
+        public bool HasPrevious
+        {
+            get
+            {
+                return Currentpage > 1;
+            }
+        }
+
+        public bool HasNext
+        {
+            get
+            {
+                return Currentpage < TotalPage;
+            }
+        }
     }
 }
